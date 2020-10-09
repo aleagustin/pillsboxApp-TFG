@@ -1,0 +1,52 @@
+<ion-header style="height: 12%; display: flex; align-items: center;">
+  <ion-toolbar >
+    <div id="container"  style="width: 96%;">
+      <div id="left">
+    <ion-buttons  slot="start" style="display: block;">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </div>
+  <div id="center">
+    <ion-title style="margin-top: 10px; font-size: x-large;">Información</ion-title>
+  </div>
+  <div id="right">
+    <img src="/assets/logo.png" height="50px" width="70px" style="margin-top: 10px;">
+  </div>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-list *ngIf="medicineUserList">
+
+      <div *ngFor="let medicine of medicineUserList;" >
+
+      <ion-item>
+       Nombre Comercial: {{medicine.nombreComercial}}
+      </ion-item>
+
+      
+      <ion-item>
+        Principio Activo: {{medicine.principioActivo}}
+      </ion-item>
+
+      <ion-item>
+        Próxima toma: {{medicine.proxNotificacion | date:'HH:mm dd/MM/yyyy':'GMT+2' }}
+      </ion-item>
+
+
+    </div>
+
+    </ion-list>
+
+
+
+
+
+
+
+
+
+</ion-content>

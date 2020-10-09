@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir medicación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="guardar()">
+        Guardar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #formGuardar="ngForm">
+    <ion-item>
+      <ion-input placeholder="Nombre comercial" [(ngModel)]="nombreComercial" name="nombreComercial" required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Principio activo" [(ngModel)]="principioActivo" name="principioActivo" required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha de Inicio del Tratamiento</ion-label>
+      <ion-datetime displayFormat="DD/MM/YY" placeholder="Seleccione..." [(ngModel)]="fechaInicio" name="fechaInicio"
+        required></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Fin del Tratamiento</ion-label>
+      <ion-input type="number" placeholder="Número de días" [(ngModel)]="numDias" name="numDias"></ion-input>
+    </ion-item>
+  </form>
+
+
+  <ion-item-divider>
+    <ion-label>
+      Añadir nueva toma
+    </ion-label>
+  </ion-item-divider>
+
+  <form #formAddToma="ngForm">
+    <ion-item>
+      <ion-label>Hora</ion-label>
+      <ion-datetime [(ngModel)]="selectHora" name="selectHora" displayFormat="HH:mm"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>L</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>M</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>X</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>J</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>V</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>S</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label>D</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="lunes" name="lunes"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="martes" name="martes"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="miercoles" name="miercoles"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="jueves" name="jueves"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="viernes" name="viernes"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="sabado" name="sabado"></ion-checkbox>
+          </ion-col>
+          <ion-col>
+            <ion-checkbox [(ngModel)]="domingo" name="domingo"></ion-checkbox>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+
+      <ion-button (click)="addToma()">
+        Añadir
+        <ion-icon slot="end" name="star"></ion-icon>
+      </ion-button>
+      
+
+    </ion-item>
+
+  </form>
+
+
+  <ion-item-divider>
+    <ion-label>
+      Horario
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-grid>
+    <ion-row *ngFor="let item of tomas">
+      <ion-col>{{("00" + item.hora).slice(-2)}}:{{("00" + item.minutos).slice(-2)}} </ion-col> <!--Formato hora HH:MM --> 
+      <ion-col>{{getDiasSemanas(item)}}</ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+</ion-content>

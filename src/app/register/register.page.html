@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="margin-top: 20px; text-align: center; background-color: #17cfe6;">
+    <ion-label style="font-size: large; text-align: center;color: white;">Todos los campos son obligatorios*</ion-label>
+    </div>
+
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+
+      <div id="input1">
+        <ion-input [(ngModel)]="nombre" name="nombre"  placeholder="Nombre" required></ion-input>
+      </div>
+      <div id="input2">
+        <ion-input  [(ngModel)]="apellido" name="apellido" placeholder="Apellidos" required></ion-input>
+      </div>
+
+      <div id="input4">
+        <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Correo electrónico" required></ion-input>
+      </div>
+
+      <div id="inputdate">
+        <ion-item>
+          <ion-label>Fecha de nacimiento</ion-label>
+          <ion-datetime displayFormat="MM/DD/YY"  [(ngModel)]="fechaNacimiento" name="fechaNacimiento" placeholder="Seleccione..."></ion-datetime>
+        </ion-item>
+      </div>
+
+      <div id="input5">
+        <ion-input type="password" [(ngModel)]="contrasena" name="contrasena" placeholder="Contraseña" required></ion-input>
+      </div>
+
+      <div id="input5">
+        <ion-input type="password" [(ngModel)]="contrasena2" name="contrasena2" placeholder="Contraseña" required></ion-input>
+      </div>
+
+      <ion-button color="success" type="submit" [disabled]="!registerForm.valid">Registrarse</ion-button>
+
+  </form>
+
+</ion-content>

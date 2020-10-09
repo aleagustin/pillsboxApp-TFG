@@ -1,0 +1,47 @@
+<ion-header style="height: 12%; display: flex; align-items: center;">
+  <ion-toolbar>
+    <div id="container" style="width: 96%;">
+      <div id="left">
+        <ion-buttons slot="start" style="display: block; color:#17cfe6;">
+          <ion-menu-button style="font-size: 45px !important;"></ion-menu-button>
+        </ion-buttons>
+      </div>
+      <div id="center">
+        <ion-title style="margin-top: 10px; font-size: x-large;">Medicamentos</ion-title>
+      </div>
+      <div id="right">
+        <ion-icon (click)="addMedicationModal()" name="add" style="width:50px;  height:50px;"></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngIf="medicineUserList">
+
+  <ion-card *ngFor="let medicine of medicineUserList">
+
+    
+    <div (click)="goinfomedicine(medicine.id)" style="width: 85%;">
+    <ion-card-header >
+      <img src="/assets/pill.png" height="40px" width="55px" style="margin-right: 10px; float: left">
+      <ion-card-title style="padding-right: 10px;">{{medicine.nombreComercial}}</ion-card-title>
+      <ion-card-subtitle style="padding-right: 10px;">{{medicine.principioActivo}}</ion-card-subtitle>
+    </ion-card-header>
+  </div>
+
+  <div style="float:right;" (click)="delete(medicine)">
+    <ion-icon name="trash-outline" style="font-size: 35px;"></ion-icon>
+   </div>
+
+  </ion-card>
+  
+</ion-list>
+
+
+ 
+  
+ 
+
+</ion-content>

@@ -1,0 +1,38 @@
+
+
+<ion-header style="height: 12%; display: flex; align-items: center;">
+  <ion-toolbar >
+    <div id="container"  style="width: 96%;">
+      <div id="left">
+    <ion-buttons  slot="start" style="display: block; color:#17cfe6;">
+      <ion-menu-button style="font-size: 45px !important;"></ion-menu-button>
+    </ion-buttons>
+  </div>
+  <div id="center">
+    <ion-title style="margin-top: 10px; font-size: x-large;">Home</ion-title>
+  </div>
+  <div id="right">
+    <img (click)="goHome()" src="/assets/logo.png" height="50px" width="70px" style="margin-top: 10px;">
+  </div>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+
+  <div id="buttons" style="text-align: center; margin-top: 30px;">
+    <ion-button style="--background: white; color: black;" (click)="goPillsBox()">
+      <img src="/assets/iconheader.png" style="width: 35px ;height: 20px; margin-right: 10px;"> PillsBox
+    </ion-button>
+    <ion-button style="--background: white; color: black;" (click)="goProspect()">
+      <ion-icon name="newspaper" style="color: black; margin-right: 10px;"></ion-icon>Prospectos
+    </ion-button>
+    <ion-button style="--background: white; color: black;" (click)="goSettings()">
+      <ion-icon name="cog" style="color: black; margin-right: 10px;"></ion-icon>Ajustes
+    </ion-button>
+  </div>
+
+</ion-content>

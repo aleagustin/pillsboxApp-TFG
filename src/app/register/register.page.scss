@@ -1,0 +1,65 @@
+ion-content {
+    margin-top: 30px;
+    --background: none;
+    background: linear-gradient(to top,#17cfe6,white);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+ion-input {
+    border-radius: 30px !important;
+    padding-left: 30px !important;
+    font-size: large;
+    border: 1px solid #ffffff;
+    border-bottom: 0px !important;
+    box-shadow: none !important;
+    background-color:white;
+    
+    height: 45px;
+    
+}
+
+#input1{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+#input2{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+#input3{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+#input4{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+#input5{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+
+#inputdate{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+

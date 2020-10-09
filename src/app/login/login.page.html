@@ -1,0 +1,29 @@
+<ion-header style="margin-bottom: 20px;">
+
+</ion-header>
+
+<ion-content>
+
+
+  <img src="/assets/logo.png" width="250px" height="130px" style="display: block; margin: auto"/>
+
+
+  <div id="input1">
+    <ion-input  placeholder="Correo Electrónico" [(ngModel)]="correo" name="correo" required></ion-input>
+  </div>
+  <div id="input2">
+    <ion-input  type="password" placeholder="Contraseña" [(ngModel)]="contrasena" name="contrasena" required></ion-input>
+  </div>
+  
+  <div id="buttonAccess">
+  <ion-button color="dark" (click)="login()">Acceder</ion-button>
+  </div>
+  
+  
+  <div style="text-align: center;">
+  <ion-label style="text-decoration-line: underline;font-size:large;" (click)="goRegister()">No tengo cuenta, Registrame.</ion-label>
+  </div>
+
+
+
+</ion-content>

@@ -1,0 +1,37 @@
+
+#buttons ion-button {
+    width: 70%;
+    height: 60px;
+    margin-top: 25px;
+}
+
+ion-content {
+    --background: none;
+    background: linear-gradient(to top,#17cfe6,white);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#container{
+    text-align:center
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+#center {
+    display:inline-block
+    
+}
+
+
+
+
+

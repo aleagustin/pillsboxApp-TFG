@@ -1,0 +1,7 @@
+{
+  "name": "PillsBox",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
